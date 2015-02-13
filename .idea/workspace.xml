@@ -1,65 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6b92087-79bf-4cf5-a7c5-4b57c0e83813" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/az.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ca.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/fl.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ga.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/id.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/il.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/mi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ms.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/nc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/nd.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ny.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/or.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ri.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/tn.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/va.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/vt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wv.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/az.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ca.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/fl.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ga.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/id.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/il.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/mi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ms.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/nc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/nd.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ny.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/or.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ri.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/tn.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/va.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/vt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wa.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wv.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummy_nursinghome.xlsx" afterPath="$PROJECT_DIR$/dummy_nursinghome.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/scss/_panel.scss" afterPath="$PROJECT_DIR$/style/scss/_panel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.js" afterPath="$PROJECT_DIR$/www/js/app.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.map" afterPath="$PROJECT_DIR$/www/js/app.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/ar.json" afterPath="$PROJECT_DIR$/js/data/ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/ar.json" afterPath="$PROJECT_DIR$/www/js/data/ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/ma.json" afterPath="$PROJECT_DIR$/js/data/ma.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/ma.json" afterPath="$PROJECT_DIR$/www/js/data/ma.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/mn.json" afterPath="$PROJECT_DIR$/js/data/mn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/mn.json" afterPath="$PROJECT_DIR$/www/js/data/mn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nursing-homes.iml" afterPath="$PROJECT_DIR$/.idea/nursing-homes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/style/project.css.map" afterPath="$PROJECT_DIR$/www/style/project.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/scss/project.css" afterPath="$PROJECT_DIR$/style/scss/project.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/style/project.css" afterPath="$PROJECT_DIR$/www/style/project.css" />
-    </list>
+    <list default="true" id="c6b92087-79bf-4cf5-a7c5-4b57c0e83813" name="Default" comment="" />
     <ignored path="nursing-homes.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -267,6 +209,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
