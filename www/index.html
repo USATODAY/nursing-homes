@@ -9,8 +9,8 @@
     <meta property="og:url"
           content="http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/index.html"/>
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Vaccine uptake by school"/>
-    <title>Vaccine uptake by school</title>
+    <meta property="og:title" content="Nursing Home Ratings"/>
+    <title>Nursing Home Ratings</title>
     <script type="text/javascript"
             src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript"
@@ -51,11 +51,11 @@
     <div class="panel-inner-wrap">
         <div id="search_cont" class="pull-left">
             <div class="search-table">
-                <h1 class="mobile-head intro">Elementary Schools Immunization Rates</h1>
+                <h1 class="mobile-head intro">Nursing Home Ratings</h1>
                 <select class="state-menu" ng-model="stateItem.states" ng-options="item.state for item in stateOptions"
                         ng-change="search.loadStateData()">
                 </select>
-                <h1 class="mobile-head search">Elementary Schools Immunization Rates</h1>
+                <h1 class="mobile-head search">Nursing Home Ratings</h1>
             </div>
             <div class="search-table text">
                 <input type="text" class="form-control" id="company_search_box" placeholder="SEARCH FOR YOUR SCHOOL"
@@ -65,14 +65,13 @@
             <ul class="list-group" ng-show="isFormOpen" id="search_results" ng-focus="isFormOpen = True">
                 <li class="list-group-item ng-cloak" ng-repeat="school in filteredArray"
                     ng-click="search.setFocus(school)">
-                    <h3 class="search-name">{{school.Name}}</h3>
-                    <h4 class="search-detail">{{school.City}}</h4>
-                    <h4 class="search-detail">{{school.County}}</h4>
-                    <h4 class="search-detail">{{school.DISTRICT}}</h4>
-                    <h4 class="search-detail">{{school.State}}</h4>
+                    <h3 class="search-name">{{school.name}}</h3>
+                    <h4 class="search-detail">{{school.city}}</h4>
+                    <h4 class="search-detail">{{school.Cnty}}</h4>
+                    <h4 class="search-detail">{{school.STATENAME}}</h4>
                 </li>
             </ul>
-            <div class="mobile-company-info-box">Use the search section above to find your school.</div>
+            <div class="mobile-company-info-box">Use the search section above to find your nursing home.</div>
         </div>
     </div>
 
@@ -80,18 +79,7 @@
         <div class="panel-inner-wrap">
             <div class="panel-data">
                 <div class="panel-info">
-                    <h3 class="data-head" id="panel-head"></h3>
-                </div>
-            </div>
-            <div class="data-charts">
-                <div class="data-block right">
-                    <div class="data-number"></div>
-                    <div class="data-text">Enrollment</div>
-                </div>
-                <div id="pie0" class="pie-box"></div>
-                <div class="data-block left">
-                    <div class="data-number"></div>
-                    <div class="data-text">Complete</div>
+                    <h3 class="data-head" id="panel-head"></h3><span class="panel-sub-chat"></span>
                 </div>
             </div>
             <div class="data-container"></div>

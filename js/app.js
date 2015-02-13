@@ -1,5 +1,5 @@
 var mobile = mobile || {};
-
+mobile.htmlElement = jQuery("html");
 mobile.panelHead = jQuery("#panel-head");
 mobile.panelSub = jQuery("#panel-sub");
 mobile.arrPanelData = jQuery(".panel-data");
@@ -16,6 +16,7 @@ mobile.chatterBox = jQuery(".mobile-company-info-box");
 mobile.mainHead = jQuery(".mobile-head");
 mobile.searchTable = jQuery(".search-table");
 mobile.background = jQuery(".mobile-back-bar");
+mobile.panelSubChat = jQuery(".panel-sub-chat");
 mobile.arrStateText = [
     "Arkansas' data represents vaccination levels for kindergarteners during the 2014-15 school year. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
     "Arizona's data represents vaccination levels for kindergartners during the 2013-14 school year. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
@@ -56,6 +57,7 @@ mobile.setPanelInfo = function (data) {
     if (data === null) {
         mobile.panelHead.empty();
         mobile.panelSub.empty();
+        mobile.panelSubChat.empty();
         mobile.dataCharts.removeClass("show");
         mobile.arrPanelData.eq(0).addClass("hidden");
         mobile.dataListItems.empty();
@@ -65,151 +67,96 @@ mobile.setPanelInfo = function (data) {
         mobile.panelWrap.eq(0).show();
         mobile.dataCharts.addClass("show");
 
-        mobile.panelHead.text(data.Name);
+        mobile.panelHead.text(data.name);
+        mobile.panelSubChat.text(" ( " + data.Beds + " beds )");
 
 
         //mobile.panelSub.text(data.City + ", " + data.State);
         mobile.panelSub.show();
-        mobile.drawChart(data);
+        //mobile.drawChart(data);
         mobile.renderTable(data);
 
     }
 };
 
 mobile.renderTable = function (prop) {
-    var numParam;
+    var i;
     var strHTML = "";
+    console.log(prop);
     strHTML += '<table class="data-table" cellspacing="0" cellpadding="0" border="0">';
     strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label">Measles, Mumps, Rubella</td>';
-    numParam = prop.MMR;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
-    }
+    strHTML += '        <td class="table-column head">2015 rating</td>';
+    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + (parseInt(prop.O_15) - parseInt(prop.O_14)).toString() + '</div></div></td>';
+    strHTML += '        <td class="table-column head">2014 rating</td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label">Diphtheria, Tetanus, Pertussis</td>';
-    numParam = prop.DTaP;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
+    strHTML += '        <td class="table-column star">';
+    for (i = 0; i < parseInt(prop.O_15); i ++) {
+        strHTML += '*';
     }
+    strHTML += '        </td>';
+    strHTML += '        <td class="table-column star">';
+    for (i = 0; i < parseInt(prop.O_14); i ++) {
+        strHTML += '*';
+    }
+    strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label">Polio</td>';
-    numParam = prop.Polio;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.SR_15); i ++) {
+        strHTML += '-';
     }
+    strHTML += '        </td>';
+    strHTML += '        <td class="table-column middle label"><div>Survey rating</div></td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.SR_14); i ++) {
+        strHTML += '-';
+    }
+    strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label">Hepatitis B</td>';
-    numParam = prop.HepB;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.QR_15); i ++) {
+        strHTML += '-';
     }
+    strHTML += '        </td>';
+    strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.QR_14); i ++) {
+        strHTML += '-';
+    }
+    strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label">Varicella</td>';
-    numParam = prop.Varicella;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.SF_15); i ++) {
+        strHTML += '-';
     }
-    strHTML += '    </tr>';
-    strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label red">Medical Exemptions</td>';
-    numParam = prop.Medical;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
+    strHTML += '        </td>';
+    strHTML += '        <td class="table-column middle label"><div>Staff rating</div></td>';
+    strHTML += '        <td class="table-column dash">';
+    for (i = 0; i < parseInt(prop.SF_14); i ++) {
+        strHTML += '-';
     }
+    strHTML += '        </td>';
     strHTML += '    </tr>';
-    strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label red">Philosophical Exemptions</td>';
-    numParam = prop.Philosophical;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
-    }
-    strHTML += '    </tr>';
-    strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label red">Religious Exemptions</td>';
-    numParam = prop.Religious;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
-    }
-    strHTML += '    </tr>';
-    strHTML += '    <tr>';
-    strHTML += '        <td class="vax-label red">Missing Records</td>';
-    numParam = prop.NoRecords;
-    if (isNaN(numParam) || (numParam === "")) {
-        strHTML += '        <td>NA</td>';
-    } else {
-        strHTML += '        <td>' + (Math.round(numParam * 10000) / 100).toString() + '%</td>';
-    }
-    strHTML += '    </tr>';
+
+
+
+
+
+
+
+
+
+
+
+
+
     strHTML += '</table>';
     mobile.dataContainer.html(strHTML);
 };
 
-mobile.getSimilarCounties = function (data) {
-
-    var keys = ["F", "S", "T", "F2", "F3"];
-    var matches = [];
-    for (var i = 0; i < keys.length; i++) {
-        var fips = data[keys[i]];
-        var match = mobile.lookup(mobile.data, "FIPS", fips);
-
-
-        matches.push(match);
-    }
-
-    mobile.renderSimilarCounties(matches);
-
-
-};
-
-mobile.renderSimilarCounties = function (arrayCounties) {
-
-    var $countyList = $(".county-list");
-
-    $countyList.empty();
-
-    for (var i = 0; i < arrayCounties.length; i++) {
-        var county = arrayCounties[i];
-
-        var itemTemplate = "<li class='county-item' data-fips='" + county.FIPS + "'>" + county.CTY + ", " + county.ST + "</li>";
-
-        $countyList.eq(0).append(itemTemplate);
-
-
-    }
-
-    $(".county-item").on("click", function () {
-        Analytics.click("Related County Clicked");
-        var $this = $(this);
-        var fips = $this.data("fips");
-        var newCounty = mobile.lookup(mobile.data, "FIPS", fips);
-        mobile.setPanelInfo(newCounty);
-        window.scrollTo(0, 0);
-
-    });
-
-
-};
 
 mobile.calcPercent = function (num) {
     return Math.round(num * 1000) / 10 + "%";
@@ -226,76 +173,16 @@ mobile.numberWithCommas = function (x) {
     }
 };
 
-mobile.drawChart = function (prop) {
-
-    if (prop !== null) {
-        //drawing pie charts
-        var numComplete = prop.Complete;
-        var numEnroll = parseInt(prop.Enrollment);
-        if (isNaN(numEnroll)) {
-            mobile.arrDataNumbers.eq(0).html("NA");
-        } else {
-            mobile.arrDataNumbers.eq(0).html(mobile.numberWithCommas(numEnroll));
-        }
-        if (isNaN(numComplete) || (numComplete === "")) {
-            numComplete = -1;
-            mobile.arrDataNumbers.eq(1).html("NA");
-        } else {
-            numComplete = Math.round(prop.Complete * 10000) / 100;
-            mobile.arrDataNumbers.eq(1).html(numComplete.toString() + "<span class=\"small_pct\">%</span>");
-        }
-
-        var arrRace = [];
-        arrRace[0] = [
-            {"label": "Complete", "value": numComplete},
-            {"label": "Incomplete", "value": 100 - numComplete}
-        ];
-        $el = $(".data-charts");
-
-        var w = mobile.arrPies.eq(0).width();
-        var h = w;
-        var r = w / 2;
-        mobile.arrPies.height(h);
-        $el.height(h);
-        mobile.arrPies.empty();
-        var data = [];
-        var vis, pie, arc, arcs;
-        var color = d3.scale.ordinal().range(["#156283", "#ffffff"]);
-        if (numComplete !== -1) {
-            jQuery.each(arrRace, function (index) {
-
-                data = arrRace[index];
-
-                vis = d3.select('#pie' + index.toString()).append("svg:svg").data([data]).attr("width", w).attr("height", h).append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
-                pie = d3.layout.pie().value(function (d) {
-                    return d.value;
-                });
-
-                // declare an arc generator function
-                arc = d3.svg.arc().outerRadius(r);
-
-                // select paths, use arc generator to draw
-                arcs = vis.selectAll("g.slice").data(pie).enter().append("svg:g").attr("class", "slice");
-                arcs.append("svg:path")
-                    .attr("fill", function (d, i) {
-                        return color(i);
-                    })
-                    .attr("d", function (d) {
-
-                        return arc(d);
-                    });
-
-            });
-            mobile.arrPies.removeClass("hide");
-        } else {
-            mobile.arrPies.addClass("hide");
-        }
-
+mobile.setUpPanels = function () {
+    var numWidth, numHeight;
+    numWidth = window.innerWidth; //mobile.boardImage.eq(0).width();
+    numHeight = window.innerHeight - 47; //mobile.boardImage.eq(0).height();
+    if (numHeight > numWidth) {
+        mobile.htmlElement.addClass("vert");
+    } else {
+        mobile.htmlElement.removeClass("vert");
     }
-
-
 };
-
 
 mobile.calcExtent = function (array1, array2, key) {
 
@@ -353,7 +240,10 @@ $(document).ready(function () {
     window.setTimeout(function () {
         $(".preloader-mobile").eq(0).fadeOut(500);
     }, 1000);
-});
+
+    onresize = onload = function () {
+        mobile.setUpPanels();
+    };});
 
 (function () {
 
@@ -370,27 +260,12 @@ $(document).ready(function () {
         $scope.stateOptions = [
             {state: "Select a State to begin"},
             {state: "AR"},
-            {state: "AZ"},
-            {state: "CA"},
-            {state: "FL"},
-            {state: "GA"},
-            {state: "ID"},
-            {state: "IL"},
+            {state: "IN"},
             {state: "MA"},
-            {state: "MI"},
             {state: "MN"},
-            {state: "MS"},
-            {state: "NC"},
-            {state: "ND"},
-            {state: "NY"},
-            {state: "OR"},
-            {state: "RI"},
-            {state: "TN"},
-            {state: "VA"},
-            {state: "VT"},
-            {state: "WA"},
-            {state: "WI"},
-            {state: "WV"}
+            {state: "MO"},
+            {state: "NH"},
+            {state: "SD"}
         ];
         $scope.stateItem = {
             states: $scope.stateOptions[0]
@@ -402,7 +277,7 @@ $(document).ready(function () {
             mobile.searchTable.addClass("search");
             mobile.background.addClass("dark");
             if (mobile.stateMenu.eq(0).children("option:selected").index() > 0) {
-                mobile.chatterBox.html(mobile.arrStateText[mobile.stateMenu.eq(0).children("option:selected").index() - 1]);
+                //mobile.chatterBox.html(mobile.arrStateText[mobile.stateMenu.eq(0).children("option:selected").index() - 1]);
                 $http.get("js/data/" + mobile.stateMenu.eq(0).children("option:selected").text().toLowerCase() + ".json").then(function (data) {
                     mobile.data = data.data;
                     $scope.data = data.data;
@@ -426,7 +301,7 @@ $(document).ready(function () {
         };
 
         this.setFocus = function (focusItem) {
-            Analytics.click("School selected");
+            Analytics.click("Nursing home selected");
             mobile.currentFocus = focusItem;
             mobile.setPanelInfo(focusItem);
             $scope.isFormOpen = false;

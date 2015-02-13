@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6b92087-79bf-4cf5-a7c5-4b57c0e83813" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/az.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/fl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ga.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/id.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/il.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/mi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ms.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/nc.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/nd.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ny.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/or.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/ri.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/tn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/va.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/vt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/data/wv.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/az.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ca.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/fl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ga.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/id.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/il.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/mi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ms.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/nc.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/nd.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ny.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/or.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/ri.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/tn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/va.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/vt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/data/wv.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dummy_nursinghome.xlsx" afterPath="$PROJECT_DIR$/dummy_nursinghome.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/scss/_panel.scss" afterPath="$PROJECT_DIR$/style/scss/_panel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.js" afterPath="$PROJECT_DIR$/www/js/app.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.min.map" afterPath="$PROJECT_DIR$/www/js/app.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/ar.json" afterPath="$PROJECT_DIR$/js/data/ar.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/ar.json" afterPath="$PROJECT_DIR$/www/js/data/ar.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/ma.json" afterPath="$PROJECT_DIR$/js/data/ma.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/ma.json" afterPath="$PROJECT_DIR$/www/js/data/ma.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/data/mn.json" afterPath="$PROJECT_DIR$/js/data/mn.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/data/mn.json" afterPath="$PROJECT_DIR$/www/js/data/mn.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nursing-homes.iml" afterPath="$PROJECT_DIR$/.idea/nursing-homes.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/style/project.css.map" afterPath="$PROJECT_DIR$/www/style/project.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/scss/project.css" afterPath="$PROJECT_DIR$/style/scss/project.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/style/project.css" afterPath="$PROJECT_DIR$/www/style/project.css" />
+    </list>
+    <ignored path="nursing-homes.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="nursing-homes" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="90" selection-start="4553" selection-end="4567" vertical-scroll-proportion="-19.190475" vertical-offset="569" max-vertical-offset="1872">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ar.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/data/ar.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="21" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-27.428572" vertical-offset="0" max-vertical-offset="1572">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="26" selection-start="9541" selection-end="9541" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="5148">
+              <folding>
+                <marker date="1423870289000" expanded="true" signature="8883:8893" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_panel.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style/scss/_panel.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="210" column="21" selection-start="3374" selection-end="3374" vertical-scroll-proportion="0.9517297" vertical-offset="1337" max-vertical-offset="2604">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/js/data/ar.json" />
+        <option value="$PROJECT_DIR$/style/scss/_panel.scss" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1441" />
+    <option name="y" value="24" />
+    <option name="width" value="2541" />
+    <option name="height" value="1412" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nursing-homes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RunManager">
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6b92087-79bf-4cf5-a7c5-4b57c0e83813" name="Default" comment="" />
+      <created>1423857473502</created>
+      <updated>1423857473502</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1441" y="24" width="2541" height="1412" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1416765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="90" selection-start="4553" selection-end="4567" vertical-scroll-proportion="-19.190475" vertical-offset="569" max-vertical-offset="1872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="26" selection-start="9541" selection-end="9541" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="5148">
+          <folding>
+            <marker date="1423870289000" expanded="true" signature="8883:8893" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/ar.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="21" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-27.428572" vertical-offset="0" max-vertical-offset="1572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/scss/_panel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="21" selection-start="3374" selection-end="3374" vertical-scroll-proportion="0.9517297" vertical-offset="1337" max-vertical-offset="2604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
