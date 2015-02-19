@@ -55,12 +55,20 @@ mobile.setPanelInfo = function (data) {
 };
 
 mobile.renderTable = function (prop) {
-    var i;
+    var i, strDiff;
     var strHTML = "";
+    var numDiff = parseInt(prop.O_15) - parseInt(prop.O_14);
+    if (numDiff > 0) {
+        strDiff = "+" + numDiff.toString();
+    } else if (numDiff === 0) {
+        strDiff = "-";
+    } else {
+        strDiff = numDiff.toString();
+    }
     strHTML += '<table class="data-table" cellspacing="0" cellpadding="0" border="0">';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column head">2015 rating</td>';
-    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + (parseInt(prop.O_15) - parseInt(prop.O_14)).toString() + '</div></div><div class="star-chatter">From last year</div></td>';
+    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + strDiff + '</div></div><div class="star-chatter">From last year</div></td>';
     strHTML += '        <td class="table-column head">2014 rating</td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
@@ -78,39 +86,39 @@ mobile.renderTable = function (prop) {
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SR_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Survey rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SR_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.Q_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.Q_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.Q_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.Q_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SF_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.SF_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Staff rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SF_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SF_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
