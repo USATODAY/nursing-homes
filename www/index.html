@@ -58,7 +58,7 @@
                 <h1 class="mobile-head search">Nursing Home Ratings</h1>
             </div>
             <div class="search-table text">
-                <input type="text" class="form-control" id="company_search_box" placeholder="SEARCH FOR YOUR SCHOOL"
+                <input type="text" class="form-control" id="company_search_box" placeholder="SEARCH FOR YOUR NURSING HOME"
                        ng-model="filterTerm" ng-change="search.mobileSearch()" ng-show="search.checkMenu()">
             </div>
             <!-- <div class="clear-button" ng-click ="search.clear()"><img src="img/close-icon.svg" alt=""></div> -->
@@ -67,8 +67,8 @@
                     ng-click="search.setFocus(school)">
                     <h3 class="search-name">{{school.name}}</h3>
                     <h4 class="search-detail">{{school.city}}</h4>
-                    <h4 class="search-detail">{{school.Cnty}}</h4>
-                    <h4 class="search-detail">{{school.STATENAME}}</h4>
+                    <h4 class="search-detail">{{school.cnty}}</h4>
+                    <h4 class="search-detail">{{school.st}}</h4>
                 </li>
             </ul>
             <div class="mobile-company-info-box">Use the search section above to find your nursing home.</div>

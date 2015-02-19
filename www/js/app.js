@@ -68,7 +68,7 @@ mobile.setPanelInfo = function (data) {
         mobile.dataCharts.addClass("show");
 
         mobile.panelHead.text(data.name);
-        mobile.panelSubChat.text(" ( " + data.Beds + " beds )");
+        mobile.panelSubChat.text(" ( " + data.beds + " beds )");
 
 
         //mobile.panelSub.text(data.City + ", " + data.State);
@@ -116,13 +116,13 @@ mobile.renderTable = function (prop) {
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash">';
-    for (i = 0; i < parseInt(prop.QR_15); i ++) {
+    for (i = 0; i < parseInt(prop.Q_15); i ++) {
         strHTML += '-';
     }
     strHTML += '        </td>';
     strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
     strHTML += '        <td class="table-column dash">';
-    for (i = 0; i < parseInt(prop.QR_14); i ++) {
+    for (i = 0; i < parseInt(prop.Q_14); i ++) {
         strHTML += '-';
     }
     strHTML += '        </td>';
@@ -259,13 +259,60 @@ $(document).ready(function () {
         $scope.companies = [];
         $scope.stateOptions = [
             {state: "Select a State to begin"},
+            {state: "AK"},
+            {state: "AL"},
             {state: "AR"},
+            {state: "AZ"},
+            {state: "CA"},
+            {state: "CO"},
+            {state: "CT"},
+            {state: "DC"},
+            {state: "DE"},
+            {state: "FL"},
+            {state: "GA"},
+            {state: "GU"},
+            {state: "HI"},
+            {state: "IA"},
+            {state: "ID"},
+            {state: "IL"},
             {state: "IN"},
+            {state: "KS"},
+            {state: "KY"},
+            {state: "LA"},
             {state: "MA"},
+            {state: "MD"},
+            {state: "ME"},
+            {state: "MI"},
             {state: "MN"},
             {state: "MO"},
+            {state: "MS"},
+            {state: "MT"},
+            {state: "NC"},
+            {state: "ND"},
+            {state: "NE"},
             {state: "NH"},
-            {state: "SD"}
+            {state: "NJ"},
+            {state: "NM"},
+            {state: "NV"},
+            {state: "NY"},
+            {state: "OH"},
+            {state: "OK"},
+            {state: "OR"},
+            {state: "PA"},
+            {state: "PR"},
+            {state: "RI"},
+            {state: "SC"},
+            {state: "SD"},
+            {state: "TN"},
+            {state: "TX"},
+            {state: "UT"},
+            {state: "VA"},
+            {state: "VI"},
+            {state: "VT"},
+            {state: "WA"},
+            {state: "WI"},
+            {state: "WV"},
+            {state: "WY"}
         ];
         $scope.stateItem = {
             states: $scope.stateOptions[0]
