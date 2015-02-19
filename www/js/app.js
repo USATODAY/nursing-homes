@@ -17,31 +17,6 @@ mobile.mainHead = jQuery(".mobile-head");
 mobile.searchTable = jQuery(".search-table");
 mobile.background = jQuery(".mobile-back-bar");
 mobile.panelSubChat = jQuery(".panel-sub-chat");
-mobile.arrStateText = [
-    "Arkansas' data represents vaccination levels for kindergarteners during the 2014-15 school year. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Arizona's data represents vaccination levels for kindergartners during the 2013-14 school year. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "California's data represents vaccination levels for kindergartners during the 2014-15 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Florida's data represents vaccination levels for kindergartners in public schools during the 2014-15 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Georgia's data represents vaccination levels for kindergartners during the 2014-15 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Idaho's data represents vaccination levels for kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Illinois' data represents vaccination levels for all students K-12 during the 2013-14 school year. The MMR rate references students who specifically have been vaccinated for measles. Data for schools with enrollments of fewer than 10 students has been redacted.",
-    "Massachusetts' data represents vaccination levels for kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 30 kindergartners has been redacted.",
-    "Michigan's data represents vaccination levels for all students K-12 during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 students has been redacted.",
-    "Minnesota's data represents vaccination levels for kindergartners during the 2013-14 school year.  The Medical Exemption rate includes both medical and conscientious objections. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Mississippi's data represents vaccination levels for kindergarteners during the 2014-15 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "North Carolina's data represents vaccination levels for kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "North Dakota’s data represents vaccination levels for kindergarteners during the 2013-14 school year. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "New York's data represents vaccination levels of all students K-12 during the 2013-14 school year. The MMR rate references students who specifically have been vaccinated for measles. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 students has been redacted.",
-    "Oregon's data represents only non-medical exemptions for all students K-12 during the 2013-14 school year. Data for schools with fewer than 50 students and for schools with fewer than 10 nonmedical exemptions has been redacted.",
-    "Rhode Island's data represents vaccination levels for kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Tennessee's data represents vaccination levels for private-school kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted. Data from the state's public schools was unavailable.",
-    "Virginia's data represents vaccination levels for kindergartners during the 2013-14 school year. The location of each school refers to the state health district. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Vermont's data represents vaccination levels of all students K-12 during the 2013-14 school year. The MMR rate references students who specifically have been vaccinated for measles. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 students has been redacted.",
-    "Washington's data represents vaccination levels for kindergartners during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 kindergartners has been redacted.",
-    "Wisconsin's data represents vaccination levels of all students K-12 during the 2013-14 school year. \"Complete\" means a student is entirely up-to-date on all recommended vaccines. Data for schools with enrollments of fewer than 10 students has been redacted.",
-    "West Virginia's data represents vaccination levels for kindergartners during the 2013-14 school year. Schools with enrollments of fewer than 30 kindergartners have been omitted."
-];
-
 
 mobile.currentFocus = null;
 
@@ -68,7 +43,7 @@ mobile.setPanelInfo = function (data) {
         mobile.dataCharts.addClass("show");
 
         mobile.panelHead.text(data.name);
-        mobile.panelSubChat.text(" ( " + data.beds + " beds )");
+        mobile.panelSubChat.text(data.beds + " beds");
 
 
         //mobile.panelSub.text(data.City + ", " + data.State);
@@ -82,76 +57,63 @@ mobile.setPanelInfo = function (data) {
 mobile.renderTable = function (prop) {
     var i;
     var strHTML = "";
-    console.log(prop);
     strHTML += '<table class="data-table" cellspacing="0" cellpadding="0" border="0">';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column head">2015 rating</td>';
-    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + (parseInt(prop.O_15) - parseInt(prop.O_14)).toString() + '</div></div></td>';
+    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + (parseInt(prop.O_15) - parseInt(prop.O_14)).toString() + '</div></div><div class="star-chatter">From last year</div></td>';
     strHTML += '        <td class="table-column head">2014 rating</td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column star">';
     for (i = 0; i < parseInt(prop.O_15); i ++) {
-        strHTML += '*';
+        strHTML += '<img class="star-icon" src="img/star.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '        <td class="table-column star">';
     for (i = 0; i < parseInt(prop.O_14); i ++) {
-        strHTML += '*';
+        strHTML += '<img class="star-icon" src="img/star.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SR_15); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
-    strHTML += '        </td>';
+    strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Survey rating</div></td>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SR_14); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.Q_15); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
-    strHTML += '        </td>';
+    strHTML += '        <span class="dash-number">' + parseInt(prop.Q_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.Q_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.Q_14); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SF_15); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
-    strHTML += '        </td>';
+    strHTML += '        <span class="dash-number">' + parseInt(prop.SF_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Staff rating</div></td>';
-    strHTML += '        <td class="table-column dash">';
+    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SF_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SF_14); i ++) {
-        strHTML += '-';
+        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
-
-
-
-
-
-
-
-
-
-
-
-
 
     strHTML += '</table>';
     mobile.dataContainer.html(strHTML);
@@ -425,27 +387,27 @@ $(document).ready(function () {
                 encodedStr,
                 encodedStrTE;
 
-            var encodedBaseURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/");
+            var encodedBaseURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/");
 
             if (schoolObj) {
-                copy = "My school, " + schoolObj.Name + " in " + schoolObj.City + ", " + schoolObj.State + ",  has a complete vaccination rate of " + (Math.round(schoolObj.Complete * 10000) / 100).toString() + ". Look up your school.";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/index.html");
+                copy = "My nursing home, " + schoolObj.name + " in " + schoolObj.city + ", " + schoolObj.st + ",  has a 2015 rating of " + parseInt(schoolObj.O_15).toString() + " stars. Look up your nursing home.";
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
             }
 
             else {
-                copy = "How vaccinated are your local schools? Look up their rates @USATODAY";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/index.html");
+                copy = "What is your local nursing home rating? Look up their ratings @USATODAY";
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
             }
 
-            var encodedTitle = encodeURIComponent("School Vaccination Rate");
+            var encodedTitle = encodeURIComponent("Nursing Home Ratings");
             var fbRedirectUrl = encodeURIComponent("http://www.gannett-cdn.com/usatoday/_common/_dialogs/fb-share-done.html");
 
             var tweetUrl = "https://twitter.com/intent/tweet?url=" + encodedURL + "&text=" + encodedStrTE + "";

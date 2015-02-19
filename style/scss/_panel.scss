@@ -184,7 +184,7 @@ html.touch .data-table td {
   font-size: 0.9em;
 }
 .star-circle {
-  background: $blue;
+  background: rgba(27, 156, 250, 0.7);
   border-radius: 0.75em;
   font-size: 3.5em;
   height: 1.5em;
@@ -196,20 +196,49 @@ html.touch .data-table td {
   padding-top: 0.1em;
 }
 .table-column.dash {
-  font-size: 6em;
+  color: #999;
   line-height: 10%;
-  padding-bottom: 0.21em;
 }
 .table-column.label {
   font-family: "Futura Today", Arial,sans-serif;
   font-size: 0.8em;
 }
-html.vert .table-column.dash {
+html.vert .dash-number {
   font-size: 2.5em;
 }
 .table-column.label div {
   position: relative;
 }
+.table-column.left {
+  text-align: right;
+}
+.table-column.right {
+  text-align: left;
+}
 .star-icon {
   width: 19%;
+}
+.star-chatter {
+  font-family: "Futura Today", Arial,sans-serif;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+}
+.dash-number {
+  display: inline-block;
+  font-size: 2em;
+  position: relative;
+  top: 0.2em;
+  width: 7%;
+}
+.dash-icon {
+  width: 18%;
+}
+html.vert .dash-icon {
+  width: 15%;
+}
+html.vert .dash-number {
+  font-size: 1.7em;
+  top: 0em;
+  width: 20%;
 }
