@@ -43,7 +43,7 @@ mobile.setPanelInfo = function (data) {
         mobile.dataCharts.addClass("show");
 
         mobile.panelHead.text(data.name);
-        mobile.panelSubChat.text(data.beds + " beds");
+        mobile.panelSubChat.html(data.addr + ", " + data.city + ", " + data.st + " " + data.Zip + "<br/>" + data.beds + " beds");
 
 
         //mobile.panelSub.text(data.City + ", " + data.State);
@@ -55,12 +55,20 @@ mobile.setPanelInfo = function (data) {
 };
 
 mobile.renderTable = function (prop) {
-    var i;
+    var i, strDiff;
     var strHTML = "";
+    var numDiff = parseInt(prop.O_15) - parseInt(prop.O_14);
+    if (numDiff > 0) {
+        strDiff = "+" + numDiff.toString();
+    } else if (numDiff === 0) {
+        strDiff = "-";
+    } else {
+        strDiff = numDiff.toString();
+    }
     strHTML += '<table class="data-table" cellspacing="0" cellpadding="0" border="0">';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column head">2015 rating</td>';
-    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + (parseInt(prop.O_15) - parseInt(prop.O_14)).toString() + '</div></div><div class="star-chatter">From last year</div></td>';
+    strHTML += '        <td rowspan="2" class="table-column middle"><div class="star-circle"><div>' + strDiff + '</div></div><div class="star-chatter">From last year</div></td>';
     strHTML += '        <td class="table-column head">2014 rating</td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
@@ -78,39 +86,39 @@ mobile.renderTable = function (prop) {
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SR_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
-    strHTML += '        <td class="table-column middle label"><div>Survey rating</div></td>';
+    strHTML += '        <td class="table-column middle label"><div>Inspection rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SR_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.Q_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.Q_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.Q_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.Q_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
     for (i = 0; i < parseInt(prop.SF_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.SF_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Staff rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SF_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SF_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash.svg" />';
+        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_14).toString() + '.svg" />';
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
@@ -391,8 +399,8 @@ $(document).ready(function () {
 
             if (schoolObj) {
                 copy = "My nursing home, " + schoolObj.name + " in " + schoolObj.city + ", " + schoolObj.st + ",  has a 2015 rating of " + parseInt(schoolObj.O_15).toString() + " stars. Look up your nursing home.";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
@@ -400,8 +408,8 @@ $(document).ready(function () {
 
             else {
                 copy = "What is your local nursing home rating? Look up their ratings @USATODAY";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
@@ -412,7 +420,7 @@ $(document).ready(function () {
 
             var tweetUrl = "https://twitter.com/intent/tweet?url=" + encodedURL + "&text=" + encodedStrTE + "";
 
-            var fbUrl = "javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=" + encodedURL2 + "&picture=http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/img/fb-share.jpg&name=" + encodedTitle + "&description=" + encodedStr + "&redirect_uri=http://www.gannett-cdn.com/experiments/usatoday/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);";
+            var fbUrl = "javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=" + encodedURL2 + "&picture=http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/img/fb-share.jpg&name=" + encodedTitle + "&description=" + encodedStr + "&redirect_uri=http://www.gannett-cdn.com/experiments/usatoday/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);";
 
 
             var emailURL = "mailto:?body=" + encodedStrTE + "%0d%0d" + encodedURL + "&subject=" + encodedTitle;

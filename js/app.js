@@ -43,7 +43,7 @@ mobile.setPanelInfo = function (data) {
         mobile.dataCharts.addClass("show");
 
         mobile.panelHead.text(data.name);
-        mobile.panelSubChat.text(data.beds + " beds");
+        mobile.panelSubChat.html(data.addr + ", " + data.city + ", " + data.st + " " + data.Zip + "<br/>" + data.beds + " beds");
 
 
         //mobile.panelSub.text(data.City + ", " + data.State);
@@ -89,7 +89,7 @@ mobile.renderTable = function (prop) {
         strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_15).toString() + '.svg" />';
     }
     strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
-    strHTML += '        <td class="table-column middle label"><div>Survey rating</div></td>';
+    strHTML += '        <td class="table-column middle label"><div>Inspection rating</div></td>';
     strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
     for (i = 0; i < parseInt(prop.SR_14); i ++) {
         strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_14).toString() + '.svg" />';
@@ -399,8 +399,8 @@ $(document).ready(function () {
 
             if (schoolObj) {
                 copy = "My nursing home, " + schoolObj.name + " in " + schoolObj.city + ", " + schoolObj.st + ",  has a 2015 rating of " + parseInt(schoolObj.O_15).toString() + " stars. Look up your nursing home.";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
@@ -408,8 +408,8 @@ $(document).ready(function () {
 
             else {
                 copy = "What is your local nursing home rating? Look up their ratings @USATODAY";
-                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
-                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-home/index.html");
+                encodedURL = encodeURIComponent("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
+                encodedURL2 = encodeURI("http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/index.html");
                 encodedStr = encodeURIComponent(copy);
                 encodedStr = encodeURI(encodedStr);
                 encodedStrTE = encodeURIComponent(copy);
@@ -420,7 +420,7 @@ $(document).ready(function () {
 
             var tweetUrl = "https://twitter.com/intent/tweet?url=" + encodedURL + "&text=" + encodedStrTE + "";
 
-            var fbUrl = "javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=" + encodedURL2 + "&picture=http://www.gannett-cdn.com/experiments/usatoday/2015/02/measles/img/fb-share.jpg&name=" + encodedTitle + "&description=" + encodedStr + "&redirect_uri=http://www.gannett-cdn.com/experiments/usatoday/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);";
+            var fbUrl = "javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=" + encodedURL2 + "&picture=http://www.gannett-cdn.com/experiments/usatoday/2015/02/nursing-homes/img/fb-share.jpg&name=" + encodedTitle + "&description=" + encodedStr + "&redirect_uri=http://www.gannett-cdn.com/experiments/usatoday/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);";
 
 
             var emailURL = "mailto:?body=" + encodedStrTE + "%0d%0d" + encodedURL + "&subject=" + encodedTitle;
