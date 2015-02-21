@@ -58,12 +58,16 @@ mobile.renderTable = function (prop) {
     var i, strDiff;
     var strHTML = "";
     var numDiff = parseInt(prop.O_15) - parseInt(prop.O_14);
-    if (numDiff > 0) {
-        strDiff = "+" + numDiff.toString();
-    } else if (numDiff === 0) {
-        strDiff = "-";
+    if (isNaN(numDiff)) {
+        strDiff = "NA";
     } else {
-        strDiff = numDiff.toString();
+        if (numDiff > 0) {
+            strDiff = "+" + numDiff.toString();
+        } else if (numDiff === 0) {
+            strDiff = "-";
+        } else {
+            strDiff = numDiff.toString();
+        }
     }
     strHTML += '<table class="data-table" cellspacing="0" cellpadding="0" border="0">';
     strHTML += '    <tr>';
@@ -73,52 +77,84 @@ mobile.renderTable = function (prop) {
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column star">';
-    for (i = 0; i < parseInt(prop.O_15); i ++) {
-        strHTML += '<img class="star-icon" src="img/star.svg" />';
+    if (isNaN(parseInt(prop.O_15))) {
+        strHTML += 'No Data';
+    } else {
+        for (i = 0; i < parseInt(prop.O_15); i ++) {
+            strHTML += '<img class="star-icon" src="img/star.svg" />';
+        }
     }
     strHTML += '        </td>';
     strHTML += '        <td class="table-column star">';
-    for (i = 0; i < parseInt(prop.O_14); i ++) {
-        strHTML += '<img class="star-icon" src="img/star.svg" />';
+    if (isNaN(parseInt(prop.O_14))) {
+        strHTML += 'No Data';
+    } else {
+        for (i = 0; i < parseInt(prop.O_14); i ++) {
+            strHTML += '<img class="star-icon" src="img/star.svg" />';
+        }
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
-    for (i = 0; i < parseInt(prop.SR_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_15).toString() + '.svg" />';
+    if (!isNaN(parseInt(prop.SR_15))) {
+        for (i = 0; i < parseInt(prop.SR_15); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_15).toString() + '.svg" />';
+        }
+        strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
+    } else {
+        strHTML += '        <span class="dash-number nodata">NO DATA</span></td>';
     }
-    strHTML += '        <span class="dash-number">' + parseInt(prop.SR_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Inspection rating</div></td>';
-    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
-    for (i = 0; i < parseInt(prop.SR_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_14).toString() + '.svg" />';
+    if (isNaN(parseInt(prop.SR_14))) {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number nodata">NO DATA</span>';
+    } else {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SR_14).toString() + '</span>';
+        for (i = 0; i < parseInt(prop.SR_14); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SR_14).toString() + '.svg" />';
+        }
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
-    for (i = 0; i < parseInt(prop.Q_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_15).toString() + '.svg" />';
+    if (!isNaN(parseInt(prop.Q_15))) {
+        for (i = 0; i < parseInt(prop.Q_15); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_15).toString() + '.svg" />';
+        }
+        strHTML += '        <span class="dash-number">' + parseInt(prop.Q_15).toString() + '</span></td>';
+    } else {
+        strHTML += '        <span class="dash-number nodata">NO DATA</span></td>';
     }
-    strHTML += '        <span class="dash-number">' + parseInt(prop.Q_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Quality rating</div></td>';
-    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.Q_14).toString() + '</span>';
-    for (i = 0; i < parseInt(prop.Q_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_14).toString() + '.svg" />';
+    if (isNaN(parseInt(prop.Q_14))) {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number nodata">NO DATA</span>';
+    } else {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.Q_14).toString() + '</span>';
+        for (i = 0; i < parseInt(prop.Q_14); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.Q_14).toString() + '.svg" />';
+        }
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
     strHTML += '    <tr>';
     strHTML += '        <td class="table-column dash left">';
-    for (i = 0; i < parseInt(prop.SF_15); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_15).toString() + '.svg" />';
+    if (!isNaN(parseInt(prop.SF_15))) {
+        for (i = 0; i < parseInt(prop.SF_15); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_15).toString() + '.svg" />';
+        }
+        strHTML += '        <span class="dash-number">' + parseInt(prop.SF_15).toString() + '</span></td>';
+    } else {
+        strHTML += '        <span class="dash-number nodata">NO DATA</span></td>';
     }
-    strHTML += '        <span class="dash-number">' + parseInt(prop.SF_15).toString() + '</span></td>';
     strHTML += '        <td class="table-column middle label"><div>Staff rating</div></td>';
-    strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SF_14).toString() + '</span>';
-    for (i = 0; i < parseInt(prop.SF_14); i ++) {
-        strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_14).toString() + '.svg" />';
+    if (isNaN(parseInt(prop.SF_14))) {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number nodata">NO DATA</span>';
+    } else {
+        strHTML += '        <td class="table-column dash right"><span class="dash-number">' +  parseInt(prop.SF_14).toString() + '</span>';
+        for (i = 0; i < parseInt(prop.SF_14); i ++) {
+            strHTML += '<img class="dash-icon" src="img/dash' + parseInt(prop.SF_14).toString() + '.svg" />';
+        }
     }
     strHTML += '        </td>';
     strHTML += '    </tr>';
